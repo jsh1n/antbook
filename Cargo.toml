@@ -8,3 +8,7 @@ authors = ["tiuuuuPJ <pj.kyosyou@outlook.jp>"]
 [[bin]]
 name = "warmup1"
 path = "src/warmup/1.rs"
+
+[[bin]]
+name = "warmup2"
+path = "src/warmup/2.rs"

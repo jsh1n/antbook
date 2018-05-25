@@ -9,7 +9,7 @@ use std::cmp;
 
 fn solve(a: Vec<u32>, n: usize) -> u32 {
     if n != a.len() {
-        panic!("n is not equal to the number of element of a");
+        panic!("n is not equal to the number of element of a!");
     }
     let mut ans: u32 = 0;
     for i in 0..n {
@@ -31,7 +31,7 @@ fn solve(a: Vec<u32>, n: usize) -> u32 {
 }
 
 #[test]
-fn ans_check () {
+fn answer_check () {
     assert_eq!(solve(vec![2, 3, 4, 5, 10], 5), 12);
     assert_eq!(solve(vec![4, 5, 10, 20], 4), 0);
 }
