@@ -1,0 +1,10 @@
+[package]
+name = "antbook"
+version = "0.1.0"
+authors = ["tiuuuuPJ <pj.kyosyou@outlook.jp>"]
+
+[dependencies]
+
+[[bin]]
+name = "warmup1"
+path = "src/warmup/1.rs"
