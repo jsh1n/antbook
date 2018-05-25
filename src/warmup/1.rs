@@ -1,14 +1,17 @@
 fn main(){
     // argument setting
     let a: Vec<u32> = vec![1, 4, 5, 6, 14, 15];
-    println!("max length:{:?}", solve(a));
+    let n: usize = 6;
+    println!("max length:{:?}", solve(a, n));
 }
 
 use std::cmp;
 
-fn solve(a: Vec<u32>) -> u32 {
+fn solve(a: Vec<u32>, n: usize) -> u32 {
+    if n != a.len() {
+        panic!("n is not equal to the number of element of a");
+    }
     let mut ans: u32 = 0;
-    let n = a.len() as usize;
     for i in 0..n {
         for j in i+1..n {
             for k in j+1..n {
@@ -29,6 +32,6 @@ fn solve(a: Vec<u32>) -> u32 {
 
 #[test]
 fn ans_check () {
-    assert_eq!(solve(vec![2, 3, 4, 5, 10]), 12);
-    assert_eq!(solve(vec![4, 5, 10, 20]), 0);
+    assert_eq!(solve(vec![2, 3, 4, 5, 10], 5), 12);
+    assert_eq!(solve(vec![4, 5, 10, 20], 4), 0);
 }
