@@ -1,5 +1,5 @@
 # 蟻本の練習問題用のリポジトリ
 
-### 1-6 ウォーミングアップ
-$ cargo run --bin warmup1
+## 1-6 ウォーミングアップ
+$ cargo run --bin warmup1  
 みたいな感じに実行
