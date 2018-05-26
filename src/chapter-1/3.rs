@@ -1,37 +1,31 @@
-fn main(){
-    // argument setting
-    let a: Vec<u32> = vec![1, 4, 5, 6, 14, 15];
-    let n: usize = 6;
-    println!("max length:{:?}", solve(a, n));
+fn main() {
+    // argument
+    let l: u8 = 10;
+    let x: Vec<u8> = vec![2, 6, 7];
+
+    // exec
+    println!("(min, max)={:?}", solve(l, x));
 }
 
 use std::cmp;
 
-fn solve(a: Vec<u32>, n: usize) -> u32 {
-    if n != a.len() {
-        panic!("n is not equal to the number of element of a!");
+fn solve(l: u8, x: Vec<u8>) -> (u8, u8) {
+    //min steps
+    let mut min_steps = 0;
+    for position in &x {
+        min_steps = cmp::max(cmp::min(*position, l - *position), min_steps);
     }
-    let mut ans: u32 = 0;
-    for i in 0..n {
-        for j in i+1..n {
-            for k in j+1..n {
-                let mut len = a[i] + a[j] + a[k];
-                let mut max_a = cmp::max(cmp::max(a[i], a[j]), a[k]);
-                println!("{} {} {}", i,j,k);
-                println!("len:{}, max_a:{}, {} {} {}", len, max_a, a[i], a[j], a[k]);
-                if max_a < len - max_a {
-                    println!("can trianglize");
-                    ans = cmp::max(ans, len) as u32;
-                }
-                println!("----------------------------------------------------");
-            }
-        }
+
+    //max steps
+    let mut max_steps = 0;
+    for position in &x {
+        max_steps = cmp::max(cmp::max(*position, l - *position), max_steps);
     }
-    return ans;
+
+    return (min_steps, max_steps);
 }
 
 #[test]
-fn answer_check () {
-    assert_eq!(solve(vec![2, 3, 4, 5, 10], 5), 12);
-    assert_eq!(solve(vec![4, 5, 10, 20], 4), 0);
+fn answer_check() {
+    assert_eq!(solve(10, vec![2, 6, 7]), (4, 8));
 }
