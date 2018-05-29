@@ -14,7 +14,7 @@ fn binary_search(slice: &mut [i32], search_value: i32) -> bool {
     let mut r: usize = slice.len();
 
     slice.sort();
-    println!("{:?}, {}",slice, search_value);
+    println!("{:?}, {}", slice, search_value);
     while r - l >= 1 {
         let i: usize = (l + r) / 2;
         if slice[i] == search_value {

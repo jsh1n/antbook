@@ -8,7 +8,7 @@ fn main() {
 fn solve(a: &[isize], k: isize) -> bool {
     if depth_first_search(a, k, 0, 0) {
         return true;
-    }else {
+    } else {
         return false;
     }
 }
