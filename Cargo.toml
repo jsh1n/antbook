@@ -2,6 +2,7 @@
 name = "antbook"
 version = "0.1.0"
 authors = ["tiuuuuPJ <pj.kyosyou@outlook.jp>"]
+autobins = true
 
 [dependencies]
 
