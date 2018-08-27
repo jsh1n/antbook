@@ -25,3 +25,11 @@ path = "src/chapter-2/1.rs"
 [[bin]]
 name = "2-2"
 path = "src/chapter-2/2.rs"
+
+[[bin]]
+name = "file_read_test"
+path = "src/chapter-2/file_read_test.rs"
+
+[[bin]]
+name = "maze"
+path = "src/chapter-2/maze.rs"
