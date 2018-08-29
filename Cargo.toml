@@ -33,3 +33,7 @@ path = "src/chapter-2/file_read_test.rs"
 [[bin]]
 name = "maze"
 path = "src/chapter-2/maze.rs"
+
+[[bin]]
+name = "greedy"
+path = "src/chapter-2/greedy.rs"
